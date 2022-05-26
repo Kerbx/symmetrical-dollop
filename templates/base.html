@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/styles/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="../static/images/logo.png">
+        </div>
+        <div class="menu">
+            <pre><a class="linki" href="/">Акции</a>    <a class="linki" href="/search">Поиск</a>   <a class="linki" href="/booking">Регистрация на рейс</a>    <a class="linki" href="/profile">Личный кабинет</a></pre>
+        </div>
+    </div>
+</head>
+<body>
+    {% block body %}{% endblock %}
+</body>
+<footer>
+    <h3>Телефон - 8 (800) 100-10-10</h3>
+    <a href="/">Home</a>
+    <a href="/login">Login</a>
+    <a href="/register">Sign up</a>
+    <a href="/contanct">Contact</a>
+    <a href="/news">News</a>
+    <a href="/return">Return</a>
+    <a href="/feedback">Feedback</a>
+</footer>
+</html>
