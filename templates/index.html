@@ -4,15 +4,34 @@
 
 {% block body %}
 <div class="wrapper">
-    <form>
-        <select name="sometext" size="5">
-            <option>text1</option>
-            <option>text2</option>
-            <option>text3</option>
-            <option>text4</option>
-            <option>text5</option>
-          </select>
-    </form>
+    <div>
+        <form>
+        </form>
+    </div>
+    <div class="promo">
+        <img src="../static/images/promotions/promotion1.jpg">
+        <h3>Returning and Changing Your Tickets</h3>
+        <p>The pandemic has changed many travelers’ plans, but we know that it will not last forever. 
+            Once all of this is over, we will continue exploring this world the way we used to. 
+            Special rules that have been developed for this challenging situation will help you cancel your trip
+            or postpone it until later.</p>
+        <br><img src="../static/images/promotions/promotion2.jpg">
+        <h3>Best offers</h3>
+        <p>To see again the streets that witnessed so much. To hug your beloved ones and look back to see
+            what you’ve come through. And to think of new dreams that will be so special!</p>
+        <br><img src="../static/images/promotions/promotion3.jpg">
+        <h3>See you more often</h3>
+        <p>Since the beginning of January, we have been expanding the geography of flights in Russia so that you can
+            see your loved ones more often. Choose our company to fly to where you are always expected.</p>
+        <br><img src="../static/images/promotions/promotion4.jpg">
+        <h3>Everything is on again</h3>
+        <p>From August 10, we will resume flights to Turkey. Flights from Moscow to Antalya will be operated twice
+            a day daily, and flights on the Moscow-Dalaman route will be operated three to seven times a week.</p>
+    </div>
+    <div class="email">
+        <form>
+            <input type="text"><input type="button" onclick="alert('Вы подписались на акции от нашей компании. Спасибо за сотрудничество!')" value="Подписаться">        </form>
+    </div>
 </div>
 
 {% endblock %}
