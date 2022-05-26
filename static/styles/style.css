@@ -17,3 +17,11 @@
     font-size: x-large;
     font-family: 'Times New Roman', Times, serif;
 }
+.promo{
+    grid-column: 2;
+    grid-row: auto;
+}
+.email{
+    grid-column: 2;
+    grid-row: -1;
+}
