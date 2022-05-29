@@ -23,5 +23,13 @@
 }
 .email{
     grid-column: 2;
-    grid-row: -1;
+    grid-row: auto;
+}
+.forma{
+    grid-column: 2;
+    grid-row: auto;
+}
+.article{
+    grid-column: 2;
+    grid-row: auto;
 }
