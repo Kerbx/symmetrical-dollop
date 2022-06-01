@@ -13,10 +13,19 @@
 
             Для демонстрации снижения стоимости вам предлагается ввести демо данные:
 
-            <form>
-                <input id="demodate" type="date"><input id="demonumber" min="1" max="44" type="number">
-                <input type="button" value="Рассчитать" onclick="if((Number(document.getElementById('demonumber').innerHTML))>22){alert('Рейс набрал более 50% бронирования, вы получаете снижение стоимости на 20%');}else{alert('Вы не можете получить скидку, так как рейс не набрал более 50% бронирования.')}">
-                <input type="button" value="Рассчитать" onclick="alert(document.getElementById('demonumber').innerHTML)">
+            <form class="ul-form">
+                <ul>
+                    <li>
+                        <input id="demodate" type="date">
+                        <label for="demonumber"></label>
+                    </li>
+                    <li>
+                        <input placeholder="Количество пассажиров на рейсе" id="demonumber" min="1" max="44" type="number">
+                    </li>
+                    <li>
+                        <input type="button" class="custom-btn btn-5" value="Рассчитать" onclick="alert('%')">
+                    </li>
+                </ul>
             </form>
 
         </p>
@@ -28,39 +37,61 @@
         </p>
     </div>
     <div class="forma">
-        <form method="post">
-            <input name="from" type="text"><input name="to" type="text">
-            <input name="dateTo" type="date"><input name="dateBack" type="date">
-            <input name="amount" type="number" max="8" min="1">
-            <input type="submit" onsubmit="this.form.submit()">
+        <form class="ul-form" method="post">
+            <ul>
+                <li>
+                    <label for="1"></label>
+                    <input id="1" name="from" placeholder="Откуда" type="text">
+                </li>
+                <li>
+                    <label for="2"></label>
+                    <input id="2" name="to" placeholder="Куда" type="text">
+                </li>
+                <li>
+                    <label for="3"></label><label for="4"></label>
+                    <input name="dateTo" id="3" type="date"><input name="dateBack" id="4" type="date">
+                </li>
+                <li>
+                    <label for="5"></label>
+                    <input name="amount" id="5" placeholder="Количество пассажирова (от 1 до 8)" type="number" max="8" min="1">
+                </li>
+                <li>
+                    <input type="submit" class="custom-btn btn-5" onsubmit="this.form.submit()">
+                </li>
+            </ul>
         </form>
     </div>
-    <div class="promo">
+    <br><div class="promo">
         <img src="../static/images/promotions/promotion1.jpg">
         <h3>Returning and Changing Your Tickets</h3>
         <p>The pandemic has changed many travelers’ plans, but we know that it will not last forever. 
             Once all of this is over, we will continue exploring this world the way we used to. 
             Special rules that have been developed for this challenging situation will help you cancel your trip
             or postpone it until later.</p>
-            <button>Перейти к акции</button>
+            <button class="custom-btn btn-5">Перейти к акции</button>
         <br><br><img src="../static/images/promotions/promotion2.jpg">
         <h3>Best offers</h3>
         <p>To see again the streets that witnessed so much. To hug your beloved ones and look back to see
             what you’ve come through. And to think of new dreams that will be so special!</p>
-            <button>Перейти к акции</button>
+            <button class="custom-btn btn-5">Перейти к акции</button>
         <br><br><img src="../static/images/promotions/promotion3.jpg">
         <h3>See you more often</h3>
         <p>Since the beginning of January, we have been expanding the geography of flights in Russia so that you can
             see your loved ones more often. Choose our company to fly to where you are always expected.</p>
-            <button>Перейти к акции</button>
+            <button class="custom-btn btn-5">Перейти к акции</button>
         <br><br><img src="../static/images/promotions/promotion4.jpg">
         <h3>Everything is on again</h3>
         <p>From August 10, we will resume flights to Turkey. Flights from Moscow to Antalya will be operated twice
             a day daily, and flights on the Moscow-Dalaman route will be operated three to seven times a week.</p>
-            <button>Перейти к акции</button>
+            <button class="custom-btn btn-5">Перейти к акции</button>
     </div>
-    <div class="email">
-        <input type="text"><input type="button" onclick="alert('Вы подписались на акции от нашей компании. Спасибо за сотрудничество!')" value="Подписаться">
+    <div class="email ul-form">
+        <ul>
+            <li>
+                <input placeholder="Ваша почта" type="text">
+                <input type="button" class="custom-btn btn-5" onclick="alert('Вы подписались на акции от нашей компании. Спасибо за сотрудничество!')" value="Подписаться">
+            </li>
+        </ul>
     </div>
 </div>
 

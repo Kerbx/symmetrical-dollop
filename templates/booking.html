@@ -1,7 +1,47 @@
 {% extends 'base.html' %}
 
+{% block head %}<script type="text/javascript" src="../static/js/dialog.js"></script>{% endblock %}
 {% block title %}Бронирование{% endblock %}
 
 {% block body %}
-
+<div class="wrapper">
+    <div class="column2">
+        <div class="article">
+            <h2>Данные о рейсах:</h2>
+            <p>
+                <br>Номер рейса: 105.
+                <br>Название города вылета: {{ _from }}.
+                <br>Название аэропорта вылета: Центральный аэропорт.
+                <br>Дата вылета: {{ dateTo }}.
+                <br>Время вылета: 10:00.
+                <br>Название города назначения: {{ to }}.
+                <br>Название аэропорта назначения: Центральный аэропорт.
+                <br>Время прилета: 16:00.
+                <br>Стоимость: 2000 рублей.
+            </p>
+        </div>
+        <div class="article">
+            <h2>Данные о пассажирах:</h2>
+            <p>
+                <br>Сидоров Иван, 29.04.1989, 526344
+                <br>Иванов Петр, 05.06.1976, 125135
+                <br>Петров Владимир, 19.03.1990, 163452
+                <br>Владимиров Илья, 25.01.1999, 256742
+                <br>Ильин Дмитрий, 20.03.1950, 152334
+                <br>Дмитров Сергей, 17.07.2000, 613626
+                <br>Сергеев Максим, 10.12.2002, 635634
+                <br>Максимов Роман, 15.03.1987, 147543
+                <br>Романович Егор, 21.02.1989, 123464
+                <br>Егоров Денис, 31.01.1980, 461258
+            </p>
+            <button class="custom-btn btn-5" onclick="">Добавить пассажира</button>
+            <button class="custom-btn btn-5" onclick="">Удалить пассажира</button>
+            <br><br>Финальная стоимость: 2000 рублей.
+            <form method="post">
+              <br><input type="submit" class="custom-btn btn-5" onsubmit="this.form.submit()" value="Оформить бронирование">
+            </form>
+          </div>
+    </div>
+    
+</div>
 {% endblock %}

@@ -2,17 +2,25 @@ import flask
 
 
 app = flask.Flask(__name__)
-data = {}
+data = {'dateTo': None,
+        'dateFrom': None,
+        'to': None,
+        'from': None,
+        'amount': 0}
+        
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     global data
     if flask.request.method == 'POST':
-        data = {'dateTo': flask.request.form.get('dateTo'),
-                'dateFrom': flask.request.form.get('dateFrom'),
-                'to': flask.request.form.get('to'),
-                'from': flask.request.form.get('from'),
-                'amount': int(flask.request.form.get('amount'))}
+        try:
+            data = {'dateTo': flask.request.form.get('dateTo'),
+                    'dateFrom': flask.request.form.get('dateFrom'),
+                    'to': flask.request.form.get('to'),
+                    'from': flask.request.form.get('from'),
+                    'amount': int(flask.request.form.get('amount'))}
+        except:
+            pass
         return flask.redirect('/search')
     return flask.render_template('index.html')
 
@@ -36,37 +44,70 @@ def profile():
 def search():
     global data
 
-    amount = 14 + data['amount']
+    data['amount'] = 14 + data['amount']
     if data['amount'] >= 22:
-        amount = 100
-    if 22 > data['amount'] >= 11:
-        amount = 50
-    if 11 > data['amount'] >= 6:
-        amount = 25
-    if data['amount'] < 6:
-        amount = 0
+        data['amount'] = 100
+    elif 22 > data['amount'] >= 11:
+        data['amount'] = 50
+    elif 11 > data['amount'] >= 6:
+        data['amount'] = 25
+    elif data['amount'] < 6:
+        data['amount'] = 0
 
     if flask.request.method == 'POST':
         return flask.redirect('/booking')
 
     return flask.render_template('search.html', to=data['to'], _from=data['from'],
                                  dateTo=data['dateTo'], dateFrom=data['dateFrom'],
-                                 amount=amount)
+                                 amount=data['amount'])
 
 
-@app.route('/booking')
+@app.route('/booking', methods=['GET', 'POST'])
 def booking():
-    return flask.render_template('booking.html')
+    global data
+    
+    if flask.request.method == 'POST':
+        return flask.redirect('/booking_management')
+
+    return flask.render_template('booking.html', to=data['to'], _from=data['from'],
+                                 dateTo=data['dateTo'], dateFrom=data['dateFrom'])
 
 
-@app.route('/booking_management')
+@app.route('/booking_management', methods=['GET', 'POST'])
 def booking_management():
-    return flask.render_template('booking_management.html')
+    global data
+    
+    if flask.request.method == 'POST':
+        return flask.redirect('/seat')
+
+    return flask.render_template('booking_management.html', to=data['to'], _from=data['from'],
+                                 dateTo=data['dateTo'], dateFrom=data['dateFrom'],
+                                 amount=data['amount'])
 
 
 @app.route('/seat')
-def route():
+def seat():
     return flask.render_template('seat.html')
+
+
+@app.route('/return')
+def back():
+    return flask.redirect('/')
+
+
+@app.route('/news')
+def news():
+    return flask.redirect('/')
+
+
+@app.route('/contact')
+def contact():
+    return flask.redirect('/')
+
+
+@app.route('/feedback')
+def feedback():
+    return flask.redirect('/')
 
 
 if __name__ == '__main__':

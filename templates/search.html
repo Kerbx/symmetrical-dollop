@@ -4,21 +4,24 @@
 
 {% block body %}
 <div class="wrapper">
-    <div>
+    <div class="article">
         <h1>Найденный рейс: №105</h1>
     </div>
-    <div>
+    <div class="article">
         <h2>Информация о найденном рейсе:</h2>
-        <br>Воздушное судно: АН – 26Б-100.
-        <br>Дата вылета: {{ dateTo }}.
-        <br>Время вылета: 10:00.
-        <br>Времы прилета: 16:00.
-        <br>Время в пути: 6 часов.
-        <br>Стоимость: 2000.
-        <br>Вероятность вылета: {{ amount }}%.
-        <form method="post">
-            <input type="submit" onsubmit="this.form.submit()" value="Перейти к бронированию">
-        </form>
+        <p>
+            <br>Воздушное судно: АН – 26Б-100.
+            <br>Дата вылета: {{ dateTo }}.
+            <br>Время вылета: 10:00.
+            <br>Времы прилета: 16:00.
+            <br>Время в пути: 6 часов.
+            <br>Стоимость: 2000.
+            <br>Вероятность вылета: {{ amount }}%.
+            <form method="post">
+                <input type="submit" class="custom-btn btn-5" onsubmit="this.form.submit()" value="Перейти к бронированию">
+            </form>
+        </p>
+        
     </div>
 </div>
 {% endblock %}
