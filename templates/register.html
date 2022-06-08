@@ -5,14 +5,30 @@
 {% block body %}
 <div class="wrapper">
     <div class="article">
-        <form method="post">
-            <input type="text" value="Имя">
-            <input type="text" value="Фамилия">
-            <input type="text" value="Номер документа">
-            <input type="tel">
-            <input type="password">
-            <input type="password">
-            <input type="submit" class="custom-btn btn-5" value="Зарегистрироваться">
+        <form class="ul-form" method="post">
+            <ul>
+                <li>
+                    <input type="text" placeholder="Имя">
+                </li>
+                <li>
+                    <input type="text" placeholder="Фамилия">
+                </li>
+                <li>
+                    <input type="text" placeholder="Номер документа">
+                </li>
+                <li>
+                    <input type="tel" placeholder="Ваш телефон">
+                </li>
+                <li>
+                    <input type="password" placeholder="Пароль">
+                </li>
+                <li>
+                    <input type="password" placeholder="Повторите пароль">
+                </li>
+                <li>
+                    <button class="custom-btn btn-5" onclick="this.form.submit()">Зарегистрироваться</button> 
+                </li>
+            </ul>
         </form>
     </div>
 </div>

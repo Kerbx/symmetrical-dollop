@@ -23,7 +23,7 @@
                         <input placeholder="Количество пассажиров на рейсе" id="demonumber" min="1" max="44" type="number">
                     </li>
                     <li>
-                        <input type="button" class="custom-btn btn-5" value="Рассчитать" onclick="alert('%')">
+                        <button class="custom-btn btn-5" onclick="this.form.submit()">Рассчитать</button> 
                     </li>
                 </ul>
             </form>
@@ -49,14 +49,14 @@
                 </li>
                 <li>
                     <label for="3"></label><label for="4"></label>
-                    <input name="dateTo" id="3" type="date"><input name="dateBack" id="4" type="date">
+                    <input name="dateTo" placeholder="Дата вылета" id="3" type="date"><input name="dateBack" placeholder="Дата возвращения" id="4" type="date">
                 </li>
                 <li>
                     <label for="5"></label>
                     <input name="amount" id="5" placeholder="Количество пассажирова (от 1 до 8)" type="number" max="8" min="1">
                 </li>
                 <li>
-                    <input type="submit" class="custom-btn btn-5" onsubmit="this.form.submit()">
+                    <button class="custom-btn btn-5" onclick="this.form.submit()">Найти рейс</button> 
                 </li>
             </ul>
         </form>
@@ -89,7 +89,7 @@
         <ul>
             <li>
                 <input placeholder="Ваша почта" type="text">
-                <input type="button" class="custom-btn btn-5" onclick="alert('Вы подписались на акции от нашей компании. Спасибо за сотрудничество!')" value="Подписаться">
+                <button class="custom-btn btn-5" onclick="alert('Вы подписались на наши новостИ!')">Подписаться!</button> 
             </li>
         </ul>
     </div>
