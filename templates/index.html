@@ -62,30 +62,33 @@
         </form>
     </div>
     <br><div class="promo">
-        <img src="../static/images/promotions/promotion1.jpg">
-        <h3>Returning and Changing Your Tickets</h3>
-        <p>The pandemic has changed many travelers’ plans, but we know that it will not last forever. 
-            Once all of this is over, we will continue exploring this world the way we used to. 
-            Special rules that have been developed for this challenging situation will help you cancel your trip
-            or postpone it until later.</p>
-            <button class="custom-btn btn-5">Перейти к акции</button>
-        <br><br><img src="../static/images/promotions/promotion2.jpg">
-        <h3>Best offers</h3>
-        <p>To see again the streets that witnessed so much. To hug your beloved ones and look back to see
-            what you’ve come through. And to think of new dreams that will be so special!</p>
-            <button class="custom-btn btn-5">Перейти к акции</button>
-        <br><br><img src="../static/images/promotions/promotion3.jpg">
-        <h3>See you more often</h3>
-        <p>Since the beginning of January, we have been expanding the geography of flights in Russia so that you can
-            see your loved ones more often. Choose our company to fly to where you are always expected.</p>
-            <button class="custom-btn btn-5">Перейти к акции</button>
-        <br><br><img src="../static/images/promotions/promotion4.jpg">
-        <h3>Everything is on again</h3>
-        <p>From August 10, we will resume flights to Turkey. Flights from Moscow to Antalya will be operated twice
-            a day daily, and flights on the Moscow-Dalaman route will be operated three to seven times a week.</p>
-            <button class="custom-btn btn-5">Перейти к акции</button>
+        <input type="radio" name="point" id="slide1" checked>
+        <input type="radio" name="point" id="slide2">
+        <input type="radio" name="point" id="slide3">
+        <input type="radio" name="point" id="slide4">
+        <div class="slider">
+            <div class="slides slide1"><div class="text-promo"><h3>Returning and Changing Your Tickets</h3><br>The pandemic has changed many travelers’ plans, but we know that it will not last forever. 
+                Once all of this is over, we will continue exploring this world the way we used to. 
+                Special rules that have been developed for this challenging situation will help you cancel your trip
+                or postpone it until later.</div></div>
+            <div class="slides slide2"><div class="text-promo"><h3>Best offers</h3><br>To see again the streets that witnessed so much. To hug your beloved ones and look back to see
+                what you’ve come through. And to think of new dreams that will be so special!</div></div>
+            <div class="slides slide3"><div class="text-promo"><h3>See you more often</h3><br>Since the beginning of January, we have been expanding the geography of flights in Russia so that you can
+                see your loved ones more often. Choose our company to fly to where you are always expected.</div></div>
+            <div class="slides slide4"><div class="text-promo"><h3>Everything is on again</h3><br>From August 10, we will resume flights to Turkey. Flights from Moscow to Antalya will be operated twice
+                a day daily, and flights on the Moscow-Dalaman route will be operated three to seven times a week.
+                </div></div>
+        </div>	
+        <div class="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+        </div>
     </div>
     <div class="email ul-form">
+    <br><br><br>
+
         <ul>
             <li>
                 <input placeholder="Ваша почта" type="text">
